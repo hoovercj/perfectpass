@@ -1,9 +1,5 @@
-2FA.org Blacklist
+Password Policy Blacklist
 =================
 
-- 1Password
-    - As discussed in [#585][1password], the 1Password team has been responsive
-      and care about their security, they just disagree on the definition of
-      2FA.
-
-[1password]: https://github.com/jdavis/twofactorauth/issues/585
+- Site Name
+    - Reason for not including the site
