@@ -1,4 +1,4 @@
-Contributing to 2FA.org
+Contributing to PerfectPass.org
 =======================
 
 All the data is managed through a series of [Yaml][yaml] files so it may be
@@ -45,7 +45,7 @@ everything for you.
 ## Site Criteria
 
 The following is a rough criteria and explanations for what sites should be on
-2FA.org. If one of the following Criteria is met, it belongs on 2FA.org:
+PerfectPass.org. If one of the following Criteria is met, it belongs on PerfectPass.org:
 
 1. **Personal Info/Image**: Any site that deals with personal info or a person's
    image. An example of a site with **Personal Info** would be their Amazon
@@ -103,7 +103,7 @@ websites:
     phone: Yes
     software: Yes
     hardware: Yes
-    doc: <link to site 2FA documentation>
+    doc: <link to site Password documentation>
 ```
 Fields `name:`, `url:`, `img:`, `tfa:` are required for all entries. If available, `twitter:` should be included. If a site provides tfa, `doc:` field is strongly encouraged. Other fields should be included as appropriate.
 
@@ -192,24 +192,12 @@ website. There are 4 ways to customize how it is displayed:
 
 ## A Note on Definitions
 
-A lot of people have different ideas of what constitutes Two Factor Auth and
-what doesn't, so it stands to reason that we should clarify a bit. For the
-purposes of this site, Two Factor Auth is defined as any service provided as a
-redundant layer for account *authentication*. Services that provide
-*authorization* redundancy are certainly appreciated, but should not be
-considered Two Factor Auth.
+TODO
 
-As an example, a site that prompts you for an authentication token following
-user login would be considered Two Factor Auth. A site that does not prompt you
-for a token upon login, but prompts you for a token when you try to perform a
-  sensitive action would not be considered Two Factor Auth.
+### New Password Managers
 
-For context, check out the discussion in [#242][242].
-
-### New Providers
-
-Rather than split out providers on the main page, we elected to keep the main
-page clean and add another page dedicated to 2fa providers.
+Rather than split out password managers on the main page, we elected to keep the main
+page clean and add another page dedicated to password managers.
 
 To add a new provider simply add to the `providers.yml` file, marking `Yes`
 where appropriate.
@@ -225,10 +213,9 @@ where appropriate.
     hardware: Yes
 ```
 
-[242]: https://github.com/jdavis/twofactorauth/issues/242
 [exclude]: /EXCLUSION.md
 [bundler]: http://bundler.io/
 [gemfile]: /Gemfile
 [jekyll]: http://jekyllrb.com/
-[travis]: https://travis-ci.org/jdavis/twofactorauth
+[travis]: https://travis-ci.org/hoovercj/passwordpolicies
 [yaml]: http://www.yaml.org/
