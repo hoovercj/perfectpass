@@ -6,7 +6,7 @@ author: Cody Hoover
 description:
     List of sites and their password policies including length, characterset, and other restrictions
 url: http://www.perfectpass.org/
-repo: https://github.com/hoovercj/passwordpolicies
+repo: https://github.com/hoovercj/perfectpass
 img: img/logo.png
 siteurl: "http://www.perfectpass.org"
 
