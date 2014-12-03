@@ -17,8 +17,7 @@ begin
   main = YAML.load_file('_data/main.yml')
   main["sections"].each do |section|
     data = YAML.load_file('_data/' + section["id"] + '.yml')
-
-    data['websites'].each do |website|
+    Array(data['websites']).each do |website|
       image = "img/#{section['id']}/#{website['img']}"
 
       unless File.exists?(image)
