@@ -5,9 +5,10 @@ title: Password Policy List
 author: Cody Hoover
 description:
     List of sites and their password policies including length, characterset, and other restrictions
-url: http://www.codyhoover.com/passwordpolicies/
+url: http://www.perfectpass.org/
 repo: https://github.com/hoovercj/passwordpolicies
 img: img/logo.png
+siteurl: "http://www.perfectpass.org"
 
 exclude:
     - CNAME
