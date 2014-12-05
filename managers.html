@@ -26,10 +26,11 @@ layout: default
                             <th class="eleven wide"><h2>Password Manager</h2></th>
                             <th>Desktop</th>
                             <th>Portable</th>
-                            <th>Token</th>
                             <th>Web-Based</th>
                             <th>Cloud-Based</th>
+                            <th>Token</th>                            
                             <th>Stateless</th>
+                            <th class="eleven wide">Price</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,74 +47,78 @@ layout: default
                           
                           {% case manager.desktop %}
                           {% when "free" %}
-                          <td class="icon">
+                          <td class="positive icon">
                               <i class="checkmark large icon"></i>
                           {% when "paid" %}
                           <td class="positive icon">
-                              <i class="checkmark large icon"></i>
+                              <i class="dollar large icon"></i>
                           {% else %}
-                          <td class="default icon">
+                          <td class="positive icon">
                           {% endcase %}
                           </td>
 
                           {% case manager.portable %}
                           {% when "free" %}
-                          <td class="icon">
+                          <td class="positive icon">
                               <i class="checkmark large icon"></i>
                           {% when "paid" %}
                           <td class="positive icon">
-                              <i class="checkmark large icon"></i>
+                              <i class="dollar large icon"></i>
                           {% else %}
-                          <td class="default icon">
-                          {% endcase %}
-                          </td>
-
-                          {% case manager.portable %}
-                          {% when "free" %}
-                          <td class="icon">
-                              <i class="checkmark large icon"></i>
-                          {% when "paid" %}
                           <td class="positive icon">
-                              <i class="checkmark large icon"></i>
-                          {% else %}
-                          <td class="default icon">
                           {% endcase %}
                           </td>
 
                           {% case manager.web %}
                           {% when "free" %}
-                          <td class="icon">
+                          <td class="positive icon">
                               <i class="checkmark large icon"></i>
                           {% when "paid" %}
                           <td class="positive icon">
-                              <i class="checkmark large icon"></i>
+                              <i class="dollar large icon"></i>
                           {% else %}
-                          <td class="default icon">
+                          <td class="positive icon">
                           {% endcase %}
                           </td>
 
                           {% case manager.cloud %}
                           {% when "free" %}
-                          <td class="icon">
+                          <td class="positive icon">
                               <i class="checkmark large icon"></i>
                           {% when "paid" %}
                           <td class="positive icon">
-                              <i class="checkmark large icon"></i>
+                              <i class="dollar large icon"></i>
                           {% else %}
-                          <td class="default icon">
+                          <td class="positive icon">
+                          {% endcase %}
+                          </td>
+
+                          {% case manager.token %}
+                          {% when "free" %}
+                          <td class="positive icon">
+                              <i class="checkmark large icon"></i>
+                          {% when "paid" %}
+                          <td class="positive icon">
+                              <i class="dollar large icon"></i>
+                          {% else %}
+                          <td class="positive icon">
                           {% endcase %}
                           </td>
 
                           {% case manager.stateless %}
                           {% when "free" %}
-                          <td class="icon">
+                          <td class="positive icon">
                               <i class="checkmark large icon"></i>
                           {% when "paid" %}
                           <td class="positive icon">
-                              <i class="checkmark large icon"></i>
+                              <i class="dollar large icon"></i>
                           {% else %}
-                          <td class="default icon">
+                          <td class="positive icon">
                           {% endcase %}
+                          </td>
+
+                          <td class="main positive">
+                              {{ manager.price }}
                           </td>                          
                         </tr>
                       {% endfor %}

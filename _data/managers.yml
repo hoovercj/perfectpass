@@ -5,7 +5,7 @@
 managers:
   - name: Dashlane
     url: https://www.dashlane.com/passwordmanager
-    img: alterego.png
+    img: dashlane.png
     desktop: free
     portable: free
     token: no
@@ -17,7 +17,7 @@ managers:
 
   - name: LastPass
     url: https://agilebits.com/onepassword
-    img: authenticatorplus.png
+    img: lastpass.png
     desktop: free
     portable: paid
     token: no
@@ -28,8 +28,8 @@ managers:
     price: free; $12/yr
 
   - name: 1Password
-    url: http://azure.microsoft.com/en-us/services/multi-factor-authentication/
-    img: azure.png
+    url: https://agilebits.com/onepassword
+    img: 1password.png
     desktop: paid
     portable: paid
     token: no
@@ -41,6 +41,7 @@ managers:
 
   - name: KeePass
     url: http://keepass.info/
+    img: keepass.png
     desktop: free
     portable: free
     token: no
@@ -52,6 +53,7 @@ managers:
 
   - name: Roboform
     url: http://www.roboform.com/
+    img: roboform.png
     desktop: paid
     portable: paid
     token: no
@@ -63,10 +65,11 @@ managers:
 
   - name: SplashID
     url: https://splashid.com/index.php
+    img: splashid.png
     desktop: paid
     portable: paid
     token: no
     web: no
     cloud: paid
     stateless:
-    price: 1 device free; $19.99/yr otherwise
+    price: 1 device free; $19.99/yr
