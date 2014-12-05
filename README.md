@@ -1,9 +1,9 @@
 Password Policies
 =================
 
-[![Build Status](http://img.shields.io/travis/jdavis/twofactorauth.svg?style=flat)](https://travis-ci.org/hoovercj/passwordpolicies)
+[![Build Status](http://img.shields.io/travis/hoovercj/perfectpass.svg?style=flat)](https://travis-ci.org/hoovercj/perfectpass)
 [![License](http://img.shields.io/badge/license-mit-blue.svg?style=flat)](/LICENSE)
-[![gitter.im](http://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-orange.svg?style=flat)](https://gitter.im/hoovercj/passwordpolicies)
+[![gitter.im](http://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-orange.svg?style=flat)](https://gitter.im/hoovercj/perfectpass)
 
 A list of popular sites and whether or not they accept two factor auth.
 
