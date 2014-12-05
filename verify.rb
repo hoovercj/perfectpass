@@ -37,12 +37,12 @@ begin
     end
   end
 
-  # Load each provider and look for each image
-  providers = YAML.load_file('_data/providers.yml')
-  providers["providers"].each do |provider|
-    pimage = "img/providers/#{provider['img']}";
+  # Load each manager and look for each image
+  managers = YAML.load_file('_data/managers.yml')
+  managers["managers"].each do |manager|
+    pimage = "img/managers/#{manager['img']}";
     unless File.exists?(pimage)
-      error("#{provider['name']} image not found.")
+      error("#{manager['name']} image not found.")
     end
     image_dimensions = [32,32]
 
