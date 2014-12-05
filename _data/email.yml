@@ -6,7 +6,7 @@ websites:
       capitals: optional
       numbers: optional
       special: optional
-      username: optional
+      username: notallowed
       misc: "Can't reuse password from the last year. Certain easy to guess passwords, especially with dictionary words, are not optional."
 
 pending:

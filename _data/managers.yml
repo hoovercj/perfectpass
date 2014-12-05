@@ -1,0 +1,72 @@
+#
+# Configuration for the Password Managers.
+#
+
+managers:
+  - name: Dashlane
+    url: https://www.dashlane.com/passwordmanager
+    img: alterego.png
+    desktop: free
+    portable: free
+    token: no
+    web: paid
+    cloud: paid
+    stateless: no
+    generator: free
+    price: free; $39.99/yr
+
+  - name: LastPass
+    url: https://agilebits.com/onepassword
+    img: authenticatorplus.png
+    desktop: free
+    portable: paid
+    token: no
+    web: free
+    cloud: free
+    stateless: no
+    generator: free
+    price: free; $12/yr
+
+  - name: 1Password
+    url: http://azure.microsoft.com/en-us/services/multi-factor-authentication/
+    img: azure.png
+    desktop: paid
+    portable: paid
+    token: no
+    web: no
+    cloud: no 
+    stateless: no
+    generator: free
+    price: $40+
+
+  - name: KeePass
+    url: http://keepass.info/
+    desktop: free
+    portable: free
+    token: no
+    web: no
+    cloud: no
+    stateless: no
+    generator: free
+    price: free
+
+  - name: Roboform
+    url: http://www.roboform.com/
+    desktop: paid
+    portable: paid
+    token: no
+    web: paid
+    cloud: paid
+    stateless: no
+    generator: free
+    price: free to 10 logins; $19.95+
+
+  - name: SplashID
+    url: https://splashid.com/index.php
+    desktop: paid
+    portable: paid
+    token: no
+    web: no
+    cloud: paid
+    stateless:
+    price: 1 device free; $19.99/yr otherwise

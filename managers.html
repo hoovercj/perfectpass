@@ -1,0 +1,127 @@
+---
+layout: default
+---
+
+{% include header.html page='managers' %}
+
+<div class="main container">
+    <div class="ui grid">
+        <div class="column">
+            <div class="banner ui icon header">
+                <i class="circular lock icon"></i>
+                <h2>Password Managers</h2>
+                <div class="sub header">
+                  A list of <a href="http://en.wikipedia.org/wiki/Password_manager">Password Managers</a>
+                </div>                
+                <div class="sub header">
+                    Add your own favorite password manager by submitting a pull request on the
+                    <a href="{{ site.repo }}">GitHub repo</a>.
+                </div>
+            </div>
+
+            <div id="{{ manager.name }}" class="section">
+                <table class="ui table celled compact segment">
+                    <thead>
+                        <tr>
+                            <th class="eleven wide"><h2>Password Manager</h2></th>
+                            <th>Desktop</th>
+                            <th>Portable</th>
+                            <th>Token</th>
+                            <th>Web-Based</th>
+                            <th>Cloud-Based</th>
+                            <th>Stateless</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      {% assign sorted_managers = site.data.managers.managers | sort: 'name' %}
+                      {% for manager in sorted_managers %}
+                        <tr>
+                          <td class="main positive">
+                          {% if manager.img %}
+                              <img src="/img/placeholder.png" data-src="/img/managers/{{ manager.img }}" class="icon" alt="{{ manager.name }}">
+                              <noscript><img src="/img/managers/{{ manager.img }}" class="icon" alt="{{ manager.name }}"></noscript>
+                          {% endif %}
+                              <a href="{{ manager.url }}">{{ manager.name }}</a>
+                          </td>
+                          
+                          {% case manager.desktop %}
+                          {% when "free" %}
+                          <td class="icon">
+                              <i class="checkmark large icon"></i>
+                          {% when "paid" %}
+                          <td class="positive icon">
+                              <i class="checkmark large icon"></i>
+                          {% else %}
+                          <td class="default icon">
+                          {% endcase %}
+                          </td>
+
+                          {% case manager.portable %}
+                          {% when "free" %}
+                          <td class="icon">
+                              <i class="checkmark large icon"></i>
+                          {% when "paid" %}
+                          <td class="positive icon">
+                              <i class="checkmark large icon"></i>
+                          {% else %}
+                          <td class="default icon">
+                          {% endcase %}
+                          </td>
+
+                          {% case manager.portable %}
+                          {% when "free" %}
+                          <td class="icon">
+                              <i class="checkmark large icon"></i>
+                          {% when "paid" %}
+                          <td class="positive icon">
+                              <i class="checkmark large icon"></i>
+                          {% else %}
+                          <td class="default icon">
+                          {% endcase %}
+                          </td>
+
+                          {% case manager.web %}
+                          {% when "free" %}
+                          <td class="icon">
+                              <i class="checkmark large icon"></i>
+                          {% when "paid" %}
+                          <td class="positive icon">
+                              <i class="checkmark large icon"></i>
+                          {% else %}
+                          <td class="default icon">
+                          {% endcase %}
+                          </td>
+
+                          {% case manager.cloud %}
+                          {% when "free" %}
+                          <td class="icon">
+                              <i class="checkmark large icon"></i>
+                          {% when "paid" %}
+                          <td class="positive icon">
+                              <i class="checkmark large icon"></i>
+                          {% else %}
+                          <td class="default icon">
+                          {% endcase %}
+                          </td>
+
+                          {% case manager.stateless %}
+                          {% when "free" %}
+                          <td class="icon">
+                              <i class="checkmark large icon"></i>
+                          {% when "paid" %}
+                          <td class="positive icon">
+                              <i class="checkmark large icon"></i>
+                          {% else %}
+                          <td class="default icon">
+                          {% endcase %}
+                          </td>                          
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                </table>
+
+            </div><!-- Section -->
+
+        </div><!-- Column -->
+    </div><!-- UI Grid -->
+</div><!-- Main Container -->
