@@ -3,6 +3,7 @@ websites:
       url: https://gmail.com
       img: gmail.png
       length: ">8"
+      bannedchars: "non-ascii"
       capitals: optional
       numbers: optional
       special: optional
