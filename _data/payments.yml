@@ -1,4 +1,19 @@
 websites:
+    - name: PayPal
+      url: https://www.paypal.com/
+      img: paypal.png
+      length: "[7, 32]"
+      categories: "N=2. letters, numbers, special"
+      bannedvalues: "username"
+      bannedchars: 'space ‘ " &'
+
+    - name: Verified By Visa
+      url: http://usa.visa.com/personal/security/security-program/verified-by-visa.jsp
+      img: visa.png
+      length: "[6, 8]"
+      categories: "N=2. letters, numbers"
+      bannedvalues: "username"
+      bannedchars: 'space'
 pending:
     - name: Amazon Payments
       url: https://payments.amazon.com
