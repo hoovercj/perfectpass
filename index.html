@@ -21,7 +21,7 @@ hash: BadPasswordPolicies
                 <div class="sub header">List of websites and their password policies including length, character, symbol, and other restrictions.
                 </div>
                 <div class="sub header">
-                    Also see the list of <a href="/providers/">password managers</a> and advice on how to use them.
+                    Also see the list of <a href="/managers/">password managers</a> and advice on how to use them.
                 </div>
                 <div id="{{ first.id }}" class="sub header">
                     Add your own favorite site by submitting a pull request on the
@@ -45,13 +45,12 @@ hash: BadPasswordPolicies
                     <table class="ui table celled compact segment">
                         <thead>
                             <tr>
-                                <th class="eleven wide"><h2>{{ section.title }}</h2></th>
+                                <th class="three wide"><h2>{{ section.title }}</h2></th>
                                 <th>Length</th>
-                                <th>Capital Letters</th>
-                                <th>Numbers</th>
-                                <th>Special Characters</th>
-                                <th>Excludes Username</th>
-                                <th>Other Restrictions</th>
+                                <th>Must contain chars from at least N of these categories</th>
+                                <th>Banned Chars</th>
+                                <th>Banned Values</th>
+                                <th>Misc.</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -76,71 +75,29 @@ hash: BadPasswordPolicies
                                         {% endif %}
                                         </td>
 
-                                        {% case website.capitals %}
-                                        {% when "required" %}
                                         <td class="positive icon">
-                                            <i class="plus large icon"></i>
-                                        {% when "optional" %}
-                                        <td class="positive icon">                                        
-                                            <i class="minus large icon"></i>
-                                        {% when "notallowed" %}
-                                        <td class="negative icon">
-                                            <i class="ban large circle icon"></i>
-                                        {% else %}
-                                        <td class="positive">
-                                        {% endcase %}
-                                        </td>
-
-                                        {% case website.numbers %}
-                                        {% when "required" %}
-                                        <td class="positive icon">
-                                            <i class="plus large icon"></i>
-                                        {% when "optional" %}
-                                        <td class="positive icon">                                        
-                                            <i class="minus large icon"></i>
-                                        {% when "notallowed" %}
-                                        <td class="negative icon">
-                                            <i class="ban large circle icon"></i>
-                                        {% else %}
-                                        <td class="positive">
-                                        {% endcase %}
-                                        </td>
-
-                                        {% case website.special %}
-                                        {% when "required" %}
-                                        <td class="positive icon">
-                                            <i class="plus large icon"></i>
-                                        {% when "optional" %}
-                                        <td class="positive icon">                                        
-                                            <i class="minus large icon"></i>
-                                        {% when "notallowed" %}
-                                        <td class="negative icon">
-                                            <i class="ban large circle icon"></i>
-                                        {% else %}
-                                        <td class="positive">
-                                        {% endcase %}
-                                        </td>
-
-                                        {% case website.username %}
-                                        {% when "required" %}
-                                        <td class="positive icon">
-                                            <i class="plus large icon"></i>
-                                        {% when "optional" %}
-                                        <td class="positive icon">                                        
-                                            <i class="minus large icon"></i>
-                                        {% when "notallowed" %}
-                                        <td class="negative icon">
-                                            <i class="ban large circle icon"></i>
-                                        {% else %}
-                                        <td class="positive">
-                                        {% endcase %}
-                                        </td>
-
-                                        <td class="positive icon">
-                                        {% if website.other %}
-                                            <i class="plus large icon"></i>
+                                        {% if website.categories %}
+                                            {{ website.categories }}
                                         {% endif %}
                                         </td>
+
+                                        <td class="positive icon">
+                                        {% if website.bannedchars %}
+                                            {{ website.bannedchars }}
+                                        {% endif %}
+                                        </td>
+
+                                        <td class="positive icon">
+                                        {% if website.bannedvalues %}
+                                            {{ website.bannedvalues }}
+                                        {% endif %}
+                                        </td>
+
+                                        <td class="positive icon">
+                                        {% if website.misc %}
+                                            {{ website.misc }}
+                                        {% endif %}
+                                        </td>    
                                     </tr>
                                 {% endif %}
                             {% endfor %}

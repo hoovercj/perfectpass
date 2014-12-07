@@ -8,6 +8,10 @@ To add a new site, go to the [data files](_data/) and get familiar with how it
 is setup. There is a section and coresponding file for each Category and they
 all follow this syntax:
 
+## External Documents
+
+We have the following external document for gathering information and ideas for moving forward: https://docs.google.com/a/codyhoover.com/document/d/1yRO_ABZ7XYX8UJJyQIQx69f2wYB5R0pKfmyYsKrz6xw/edit?usp=sharing
+
 ## Guidelines
 
 1. **Don't break the build**: We have a simple continuous integration system
@@ -97,98 +101,18 @@ websites:
     url: https://www.site.com/
     twitter: SiteTwitter
     img: site.png
-    tfa: Yes
-    sms: Yes
-    email: Yes
-    phone: Yes
-    software: Yes
-    hardware: Yes
-    doc: <link to site Password documentation>
 ```
-Fields `name:`, `url:`, `img:`, `tfa:` are required for all entries. If available, `twitter:` should be included. If a site provides tfa, `doc:` field is strongly encouraged. Other fields should be included as appropriate.
+Fields `name:`, `url:`, `img:` are required for all entries. If available, `twitter:` should be included.
 
-### Exceptions & Restrictions
-
-If a site doesn't support 2FA in certain countries, you can note this on the
-website. There are 4 ways to customize how it is displayed:
-
-1. A default message acknowledging restrictions will be used with the following
-   config:
-
-   ```yml
-    - name: Site Name
-      url: https://www.site.com/
-      twitter: SiteTwitter
-      img: site.png
-      tfa: Yes
-      sms: Yes
-      exceptions: Yes
-      doc: <link to site 2FA documentation>
-   ```
-2. The message can be replaced with a custom set of words:
-
-   ```yml
-    - name: Site Name
-      url: https://www.site.com/
-      twitter: SiteTwitter
-      img: site.png
-      tfa: Yes
-      sms: Yes
-      exceptions:
-          text: "Specific text goes here."
-      doc: <link to site 2FA documentation>
-   ```
-3. The icon can be made into a link in which more details can be revealed such
-   as country specific info and anything else.
-
-   ```yml
-    - name: Site Name
-      url: https://www.site.com/
-      twitter: SiteTwitter
-      img: site.png
-      tfa: Yes
-      sms: Yes
-      exceptions:
-          link: Yes
-      doc: <link to site 2FA documentation>
-   ```
-4. 2 and 3 can be combined into:
-
-   ```yml
-    - name: Site Name
-      url: https://www.site.com/
-      twitter: SiteTwitter
-      img: site.png
-      tfa: Yes
-      sms: Yes
-      exceptions:
-          link: Yes
-          text: "Specific text can go here as well."
-      doc: <link to site 2FA documentation>
-   ```
 
 ### Pro Tips
 
 - See Guideline #2 about icons. The png file should go in the corresponding
   `img/section` folder.
 
-- Only the 2FA methods implemented by a site need a `yes` tag, the others can
-  just be left off completely.
-
 - For the sake of organization and readability, it is appreciated if you insert
   new sites alphabetically and that your site chunk follow the same order as the
   example above.
-
-- If a site supports 2FA, their Twitter handle is not needed and can be left out
-  for cleanliness.
-
-- If a site does not have 2FA but there is documentation that they are adding
-  it, then use:
-
-  ```yml
-  tfa: No
-  status: <url to documentation>
-  ```
 
 ## A Note on Definitions
 
@@ -199,18 +123,13 @@ TODO
 Rather than split out password managers on the main page, we elected to keep the main
 page clean and add another page dedicated to password managers.
 
-To add a new provider simply add to the `providers.yml` file, marking `Yes`
+To add a new provider simply add to the `managerss.yml` file, marking `free` or `paid`
 where appropriate.
 
 ```yml
   - name: Company Name
     url: https://example.com
     img: company.png
-    sms: Yes
-    email: Yes
-    phone: Yes
-    software: Yes
-    hardware: Yes
 ```
 
 [exclude]: /EXCLUSION.md
