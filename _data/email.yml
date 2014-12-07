@@ -2,13 +2,35 @@ websites:
     - name: Gmail
       url: https://gmail.com
       img: gmail.png
-      length: >8
+      length: ">8"
       capitals: optional
       numbers: optional
       special: optional
       username: notallowed
-      misc: "Can't reuse password from the last year. Certain easy to guess passwords, especially with dictionary words, are not optional."
+      misc: "Can't reuse password from the last year. Certain easy to guess passwords, especially with dictionary words, are not allowed."
 
+    - name: Hotmail
+      url: https://hotmail.com
+      img: hotmail.png
+      length: ">8"
+      categories: "N=2. uppercase, lowercase, numbers, special"
+      bannedvalues: "username"
+      capitals: optional
+      numbers: optional
+      special: optional
+      username: notallowed
+      misc:
+
+    - name: Yahoo Mail
+      url: https://mail.yahoo.com
+      img: yahoomail.png
+      length: "[8, 32]"
+      bannedvalues: "first name, last name, username, 'password'"
+      capitals: optional
+      numbers: optional
+      special: optional
+      username: notallowed
+      misc: "Can't reuse a previous password; must have more than one unique char; has minimum strength requirement"
 pending:
     - name: Aol Mail
       url: https://mail.aol.com
