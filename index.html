@@ -42,7 +42,7 @@ hash: BadPasswordPolicies
                 {% capture website_names %}{% for website in section_file.websites %}{{ website.name | downcase | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
                 {% assign lowercase_names = website_names | split:',' | sort %}
                 <div class="section">
-                    <table class="ui table celled compact segment">
+                    <table class="ui table compact segment">
                         <thead>
                             <tr>
                                 <th class="three wide"><h2>{{ section.title }}</h2></th>
@@ -93,12 +93,17 @@ hash: BadPasswordPolicies
                                         {% endif %}
                                         </td>
 
-                                        <td class="positive icon">
+                                        <td class="positive icon misc-toggle" id="misc{{ forloop.index }}">
                                         {% if website.misc %}
-                                            {{ website.misc }}
+                                            <a href="#row-misc{{ forloop.index }}"><i class="angle double down large icon"></i></a>
                                         {% endif %}
                                         </td>    
                                     </tr>
+                                    {% if website.misc %}
+                                        <tr class='collapse' id="row-misc{{ forloop.index }}">
+                                            <td colspan='6'><div>{{ website.misc }}</div></td>
+                                        </tr>
+                                    {% endif %}
                                 {% endif %}
                             {% endfor %}
                         {% endfor %}

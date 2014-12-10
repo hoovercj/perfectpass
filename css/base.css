@@ -108,6 +108,15 @@ td img.icon {
     margin: 2em 0;
 }
 
+.ui.compact.table tr.collapse td {
+	padding: 0px;
+}
+
+.collapse td div {
+	display: none;
+	padding: 8px;
+}
+
 @media(min-width: 767px) {
   .ui.menu.main > .menu {
       width: 840px;
