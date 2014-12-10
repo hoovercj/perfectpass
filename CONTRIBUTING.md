@@ -10,7 +10,9 @@ all follow this syntax:
 
 ## External Documents
 
-We have the following external document for gathering information and ideas for moving forward: https://docs.google.com/a/codyhoover.com/document/d/1yRO_ABZ7XYX8UJJyQIQx69f2wYB5R0pKfmyYsKrz6xw/edit?usp=sharing
+We have the following external document for gathering information and discussing ideas for moving forward:
+
+https://docs.google.com/a/codyhoover.com/document/d/1yRO_ABZ7XYX8UJJyQIQx69f2wYB5R0pKfmyYsKrz6xw/edit?usp=sharing
 
 ## Guidelines
 
@@ -136,5 +138,5 @@ where appropriate.
 [bundler]: http://bundler.io/
 [gemfile]: /Gemfile
 [jekyll]: http://jekyllrb.com/
-[travis]: https://travis-ci.org/hoovercj/passwordpolicies
+[travis]: https://travis-ci.org/hoovercj/perfectpass
 [yaml]: http://www.yaml.org/
