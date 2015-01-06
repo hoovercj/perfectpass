@@ -41,6 +41,14 @@
             <i class="play sign icon"></i>
             Password Managers
         </a>
+    {% if include.page == 'resetpasswords' %}
+        <a href="/resetpasswords" class="active item">
+    {% else %}
+        <a href="/resetpasswords" class="item">
+    {% endif %}
+            <i class="privacy sign icon"></i>
+            Reset Passwords
+        </a>    
 
 {% if 1 == 0 %}
 <!-- Don't show for right now -->
