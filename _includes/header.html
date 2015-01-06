@@ -12,33 +12,16 @@
     {% else %}
         <a href="/" class="item">
     {% endif %}
-            <i class="home icon"></i>
+            <i class="protect icon"></i>
             Home
         </a>
-
-    {% if include.page == 'home' %}
-        <div class="ui dropdown item">
-            Categories <i class="dropdown icon"></i>
-            <div class="menu">
-                {% for section in site.data.main.sections %}
-                    {% assign section_file = site.data[section.id] %}
-                    {% if section_file.websites.size > 0 %}
-                <a href="#{{ section.id }}" class="item">
-                    <i class="{{ section.icon }} icon"></i>
-                    {{ section.title }}
-                </a>
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    {% endif %}
 
     {% if include.page == 'managers' %}
         <a href="/managers" class="active item">
     {% else %}
         <a href="/managers" class="item">
     {% endif %}
-            <i class="play sign icon"></i>
+            <i class="lock icon"></i>
             Password Managers
         </a>
     {% if include.page == 'resetpasswords' %}
@@ -46,7 +29,7 @@
     {% else %}
         <a href="/resetpasswords" class="item">
     {% endif %}
-            <i class="privacy sign icon"></i>
+            <i class="privacy icon"></i>
             Reset Passwords
         </a>    
 
