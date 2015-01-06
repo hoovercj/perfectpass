@@ -60,7 +60,7 @@ hash: BadPasswordPolicies
                                 {% assign current_name = website.name | downcase %}
                                 {% if lowercase_name == current_name %}
                                     <tr>
-                                        <td class="main positive">
+                                        <td class="main">
                                         {% if website.img %}
                                             <img src="/img/placeholder.png" data-src="/img/{{ section.id }}/{{ website.img }}" class="icon" alt="{{ website.name }}">
                                             <noscript><img src="/img/{{ section.id }}/{{ website.img }}" class="icon" alt="{{ website.name }}"></noscript>
@@ -69,31 +69,31 @@ hash: BadPasswordPolicies
                                             {% include exception.html website=website %}
                                         </td>
 
-                                        <td class="positive">
+                                        <td>
                                         {% if website.length %}
                                             {{ website.length }}
                                         {% endif %}
                                         </td>
 
-                                        <td class="positive">
+                                        <td>
                                         {% if website.categories %}
                                             {{ website.categories }}
                                         {% endif %}
                                         </td>
 
-                                        <td class="positive">
+                                        <td>
                                         {% if website.bannedchars %}
                                             {{ website.bannedchars }}
                                         {% endif %}
                                         </td>
 
-                                        <td class="positive">
+                                        <td>
                                         {% if website.bannedvalues %}
                                             {{ website.bannedvalues }}
                                         {% endif %}
                                         </td>
 
-                                        <td class="positive icon misc-toggle" id="misc{{ forloop.index }}">
+                                        <td class="icon misc-toggle" id="misc{{ forloop.index }}">
                                         {% if website.misc %}
                                             <a href="#row-misc{{ forloop.index }}"><i class="angle double down large icon"></i></a>
                                         {% endif %}
