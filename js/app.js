@@ -5,7 +5,7 @@
 }(window, jQuery));
 
 var resetPasswordUrl = 'https://password-resetter.herokuapp.com/resetpassword/';
-// var resetPasswordTestUrl = 'https://peaceful-refuge-8041.herokuapp.com/resetpassword/test'
+var resetPasswordTestUrl = 'https://password-resetter.herokuapp.com/resetpassword/test';
 
 $(document).ready(function() {
     $("img").unveil(50);
@@ -20,11 +20,11 @@ $(document).ready(function() {
     	$.get( resetPasswordUrl + email, function(data) {});
     });
 
-    //$('#reset-password-test-button').click(function() {
-    //     var email = $('#reset-password-email-input').val();
-    //     var site = $('#reset-password-site-input').val();
-    //     $.get( resetPasswordTestUrl + "?email=" + email + "&site=" + site, function(data) {
-    //         alert(data);
-    //     });
-    // });
+    $('#reset-password-test-button').click(function() {
+        var email = $('#reset-password-email-input').val();
+        var site = $('#reset-password-site-input').val();
+        $.get( resetPasswordTestUrl + "?email=" + email + "&site=" + site, function(data) {
+            alert(data);
+        });
+    });
 });
