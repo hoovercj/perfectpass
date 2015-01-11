@@ -5,7 +5,7 @@
 }(window, jQuery));
 
 var resetPasswordUrl = 'https://password-resetter.herokuapp.com/resetpassword/';
-var resetPasswordTestUrl = 'https://password-resetter.herokuapp.com/resetpassword/test';
+var resetPasswordTestUrl = 'https://password-resetter.herokuapp.com/resetpassword/test/';
 
 $(document).ready(function() {
     $("img").unveil(50);
