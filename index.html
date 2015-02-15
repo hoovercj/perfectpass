@@ -72,8 +72,6 @@ hash: BadPasswordPolicies
                                         <td>
                                         {% if website.length %}
                                             {{ website.length }}
-                                        {% else %}
-                                            n/a
                                         {% endif %}
                                         </td>
 
@@ -83,24 +81,18 @@ hash: BadPasswordPolicies
                                                 Requires {{ website.categories-count }}: 
                                             {% endif %}
                                             {{ website.categories }}
-                                        {% else %}
-                                            n/a
                                         {% endif %}
                                         </td>
 
                                         <td>
                                         {% if website.bannedchars %}
                                             {{ website.bannedchars }}
-                                        {% else %}
-                                            n/a
                                         {% endif %}
                                         </td>
 
                                         <td>
                                         {% if website.bannedvalues %}
                                             {{ website.bannedvalues }}
-                                        {% else %}
-                                            n/a
                                         {% endif %}
                                         </td>
 
