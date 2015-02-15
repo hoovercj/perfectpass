@@ -3,18 +3,18 @@ websites:
       url: https://gmail.com
       img: gmail.png
       length: ">8"
-      bannedchars: "non-ascii"
       capitals: optional
       numbers: optional
       special: optional
       username: notallowed
-      misc: "Can't reuse password from the last year. Certain easy to guess passwords, especially with dictionary words, are not allowed."
+      misc: "Can't reuse password from the last year. Certain easy to guess passwords, especially with dictionary words, are not allowed. Ascii only."
 
     - name: Hotmail
       url: https://hotmail.com
       img: hotmail.png
       length: ">8"
-      categories: "N=2. uppercase, lowercase, numbers, special"
+      categories-count: "2"
+      categories: "uppercase, lowercase, numbers, special"
       bannedvalues: "username"
       capitals: optional
       numbers: optional
@@ -25,7 +25,7 @@ websites:
     - name: Yahoo Mail
       url: https://mail.yahoo.com
       img: yahoomail.png
-      length: "[8, 32]"
+      length: "8 - 32"
       bannedvalues: "first name, last name, username, 'password'"
       capitals: optional
       numbers: optional
