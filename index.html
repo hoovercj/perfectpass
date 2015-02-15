@@ -47,7 +47,7 @@ hash: BadPasswordPolicies
                             <tr>
                                 <th class="three wide"><h2>{{ section.title }}</h2></th>
                                 <th>Length</th>
-                                <th>Must Use N of These Types</th>
+                                <th>Required Character Types</th>
                                 <th>Banned Chars</th>
                                 <th>Banned Values</th>
                                 <th>Misc.</th>
@@ -79,6 +79,9 @@ hash: BadPasswordPolicies
 
                                         <td>
                                         {% if website.categories %}
+                                            {% if website.categories-count %}
+                                                Requires {{ website.categories-count }}: 
+                                            {% endif %}
                                             {{ website.categories }}
                                         {% else %}
                                             n/a
