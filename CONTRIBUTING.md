@@ -93,9 +93,13 @@ id with the `.yml` extension.
 First and foremost, make sure the new site meets our [definition
 requirements](#a-note-on-definitions) for Two Factor Auth.
 
+If the password policy isn't explicitly available for a site, attempt to use some of the following passwords to nail down important rules such as minimum and maximum length and special character allowances: 
+
+`abc`, `password`, `abcdefghijklmnopqrstuvwxyz`, `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`, `!@#$%^&*()- _+={}[]:;"',./~`
+
 The values should be pretty straight forward for adding a new website. The
 `websites` array should already be defined, just add a new website to it like
-this example:
+the example below.
 
 ```yml
 websites:
@@ -103,6 +107,9 @@ websites:
     url: https://www.site.com/
     twitter: SiteTwitter
     img: site.png
+    length: 8-24
+    categories-count: 2
+    banned-chars: space $ < > & ^ ! [ ]
 ```
 Fields `name:`, `url:`, `img:` are required for all entries. If available, `twitter:` should be included.
 
