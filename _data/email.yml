@@ -2,7 +2,7 @@ websites:
     - name: Gmail
       url: https://gmail.com
       img: gmail.png
-      length: ">8"
+      length: "8<x<100"
       capitals: optional
       numbers: optional
       special: optional
