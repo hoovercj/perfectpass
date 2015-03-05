@@ -26,21 +26,28 @@ $(document).ready(function() {
     	$('#reset-message').show();
     }
 
-    $('#reset-password-button').click(function() {
+    $('#reset-form').on('submit', function(e) {
+    	e.preventDefault();
     	var email = $('#reset-password-input').val();
-    	$(this).addClass('loading');
+    	$('#reset-password-button').prop('disabled', 'disabled');
+        $('#reset-password-button').addClass('disabled');
     	$.get( resetPasswordUrl + email, function(data) {
-    		console.dir(data);    		
+    		console.dir(data);
+        	if(data.error) {
+        		showMessage('negative', 'Error', data.error);
+        	} else {
+        		showMessage('positive', 'Check your inbox', data.message);
+        	}
     	}).fail(function(error) {
     		console.dir(error);
     	}).always(function() {
-    		$('this').removeClass('loading');    		
+    		$('#reset-password-button').removeAttr('disabled');
+    		$('#reset-password-button').removeClass('disabled');    		
     	});
     });
 
     $('#test-form').on('submit', function (e) {
-		e.preventDefault();
-		console.log('OnSubmit');
+    	e.preventDefault();    	
 		var email = $('#reset-password-email-input').val();
         var site = $('#reset-password-site-input').val();
         $('#reset-password-test-button').prop('disabled', 'disabled');
