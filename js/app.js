@@ -4,8 +4,8 @@
     $('a.popup.exception').popup();
 }(window, jQuery));
 
-var resetPasswordUrl = 'https://password-resetter.herokuapp.com/resetpassword/';
-var resetPasswordTestUrl = 'https://password-resetter.herokuapp.com/resetpassword/test/';
+var resetPasswordUrl = 'https://phantom-password-resetter.herokuapp.com/resetpassword/';
+var resetPasswordTestUrl = 'https://phantom-password-resetter.herokuapp.com/resetpassword/test/';
 
 $(document).ready(function() {
     $("img").unveil(50);
@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     $('#reset-password-button').click(function() {
     	var email = $('#reset-password-input').val();
-    	$.get( resetPasswordUrl + email, function(data) {});
+    	$.getJSON( resetPasswordUrl + email, function(data) {});
     });
 
     $('#reset-password-test-button').click(function() {
