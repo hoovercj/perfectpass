@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     $('#reset-password-button').click(function() {
     	var email = $('#reset-password-input').val();
-    	$.getJSON( resetPasswordUrl + email, function(data) {});
+    	$.get( resetPasswordUrl + email, function(data) {});
     });
 
     $('#reset-password-test-button').click(function() {
