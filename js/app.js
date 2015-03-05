@@ -4,7 +4,8 @@
     $('a.popup.exception').popup();
 }(window, jQuery));
 
-var resetPasswordUrl = 'https://peaceful-refuge-8041.herokuapp.com/resetpassword/';
+//var resetPasswordUrl = 'https://peaceful-refuge-8041.herokuapp.com/resetpassword/';
+var resetPasswordUrl = 'phantom-password-resetter.herokuapp.com/resetpassword/';
 
 $(document).ready(function() {
     $("img").unveil(50);
